@@ -1,9 +1,9 @@
 ## cURL
-1. TEST CONNECTION (GET)
+1. Test connection (GET)
    ```sh
    curl --location 'http://127.0.0.1:5000'
    ```
-2. PREDICT (POST)
+2. Predict (POST)
    ```sh
    curl --location 'http://127.0.0.1:5000/predict' \
    --header 'Content-Type: application/json' \
@@ -21,7 +21,7 @@
 1. Create new firewall rule with the following configuration:
    - Name: <strong>allow-app</strong>
    - Direction: ingress
-   - Target tags: `<target-vm>` (Jika sudah terdapat firewall rule dengan konfigurasi yang sama, tambahkan saja target-vm baru ke target tags)
+   - Target tags: `<target-vm>` (If a firewall rule with the same configuration already exists, just add the new target VM to the target tags)
    - IP ranges: 0.0.0.0/0
    - Protocols and ports:
      - TCP: 8080
@@ -31,7 +31,7 @@
    - Machine type: e2-medium
    - Image: Debian, Debian GNU/Linux, 12 (bookworm), amd64 built on 20240910
    - Network interface:
-     - External IPv4 address : klik "RESERVE STATIC EXTERNAL IP ADDRESS" dan kemudian beri nama pada static ip addressnya. Click "Reserve".
+     - External IPv4 address: click "RESERVE STATIC EXTERNAL IP ADDRESS" and then give it a name. Click "Reserve."
    - Network Tags: `<target-vm>`
 3. SSH to the VM
 4. Update and Install Required Packages:
@@ -59,12 +59,12 @@
    http://<your_static_ip>:8080
    ```
 
-Konfigurasi di atas akan mati jika VM mati dan perlu restart ulang, baik karena disengaja maupun tidak. Anda perlu menghidupkannya secara manual. Untuk memastikan bahwa aplikasi ini berjalan secara otomatis pada VM Startup, lakukan langkah berikut.
-1. Buat sebuah systemd service file:
+The above configuration will stop if the VM shuts down, either intentionally or accidentally. You need to restart it manually. To ensure the application runs automatically on VM startup, follow these steps:
+1. Create a systemd service file:
    ```sh
    sudo nano /etc/systemd/system/flaskapp.service
    ```
-2. Tambahkan teks dibawah ke dalam file
+2. Add the following content to the file:
    ```sh
    [Unit]
    Description=Gunicorn instance to serve flask app
@@ -80,7 +80,7 @@ Konfigurasi di atas akan mati jika VM mati dan perlu restart ulang, baik karena 
    [Install]
    WantedBy=multi-user.target
    ```
-   Ganti your_user dengan username anda.
+   Replace `your_user` with your username.
 3. Reload systemd and start your service:
    ```sh
    sudo systemctl daemon-reload
