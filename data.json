@@ -1,0 +1,48 @@
+{
+  "plant-description": {
+    "Arixtolochia acuminata": {
+      "description": "Arixtolochia acuminata is a species of flowering plant that thrives in tropical climates. It requires well-drained soil and regular watering to maintain its growth."
+    },
+    "Cassia Fistula": {
+      "description": "Cassia Fistula, commonly known as the golden shower tree, is known for its beautiful yellow flowers. It prefers sunny locations and can tolerate a range of soil types."
+    },
+    "Jengkol": {
+      "description": "Jengkol is a type of legume native to Southeast Asia. It grows well in humid, tropical environments and is known for its distinctive odor."
+    },
+    "Cinamomum verum": {
+      "description": "Cinamomum verum, also known as true cinnamon, is a tree whose inner bark is used as a spice. It grows best in warm climates with well-drained soil."
+    },
+    "Klero Dendrum": {
+      "description": "Klero Dendrum is a genus of flowering plants that require a warm climate and rich, moist soil to thrive."
+    },
+    "Melicope Pteleifolia": {
+      "description": "Melicope Pteleifolia is a plant species known for its medicinal properties. It grows in tropical regions and prefers shaded areas."
+    },
+    "Micromelum Minutum": {
+      "description": "Micromelum Minutum is a small tree or shrub found in tropical areas. It is adaptable to various soil types and requires moderate watering."
+    },
+    "Mussaenda Frondosa": {
+      "description": "Mussaenda Frondosa is an ornamental plant known for its vibrant flowers. It thrives in tropical climates with plenty of sunlight."
+    },
+    "Saga": {
+      "description": "Saga, or Abrus precatorius, is a leguminous plant with bright red seeds. It grows in warm, humid conditions and requires minimal care."
+    },
+    "Uvaria": {
+      "description": "Uvaria is a genus of flowering plants in the family Annonaceae. It is native to tropical regions and grows well in fertile, well-drained soil."
+    }
+  },
+  "rainfall": {
+    "01": 195,
+    "02": 185,
+    "03": 175,
+    "04": 160,
+    "05": 145,
+    "06": 130,
+    "07": 115,
+    "08": 120,
+    "09": 135,
+    "10": 150,
+    "11": 165,
+    "12": 180
+  }
+}
